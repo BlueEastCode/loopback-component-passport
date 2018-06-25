@@ -36,8 +36,8 @@
   "relations": {
     "user": {
       "type": "belongsTo",
-      "model": "User",
-      "foreignKey": "userId"
+      "model": "Account",
+      "foreignKey": "accountId"
     }
   }
 }
