@@ -30,7 +30,8 @@
     "passport": "^0.4.0",
     "strong-globalize": "^4.1.1",
     "underscore": "^1.9.1",
-    "uuid": "^3.2.1"
+    "uuid": "^3.2.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
@@ -44,8 +45,11 @@
   "scripts": {
     "lint": "eslint .",
     "test": "./node_modules/.bin/mocha -R spec --timeout 10000 test/*.js",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "main": "./lib/index.js",
-  "license": "Artistic-2.0"
+  "license": "Artistic-2.0",
+  "snyk": true
 }
